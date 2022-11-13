@@ -100,7 +100,7 @@ mnist_model = tf.keras.Sequential([
 ])
 loss = tf.losses.SparseCategoricalCrossentropy()
 
-opt = tf.compat.v1.train.AdagradOptimizer(0.01 * hvd.size())\
+opt = tf.compat.v1.train.AdagradOptimizer(0.01 * hvd.size())
 checkpoint_dir = './checkpoints/tf2_mnist'
 checkpoint = tf.train.Checkpoint(model=mnist_model, optimizer=opt)
 
