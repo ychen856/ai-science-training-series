@@ -350,7 +350,9 @@ def main():
         iters, losses, accuracies = train_epoch(epoch, step_in_epoch, train_ds, val_ds, network, optimizer, BATCH_SIZE, checkpoint)
         epoch.assign_add(1)
         step_in_epoch.assign(0)
-
+        print('iter', iters)
+        print('losses', losses)
+        print('accar', accuracies)
         plt.plot(iters, losses, label="loss")
         plt.plot(iters, accuracies, label="accuracy")
         plt.legend()
