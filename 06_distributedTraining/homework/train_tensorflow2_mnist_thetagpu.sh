@@ -12,8 +12,8 @@ conda activate
 # You have to point this to YOUR local copy of ai-science-training-series
 
 export TF_XLA_FLAGS="--tf_xla_auto_jit=2"
-mpirun -np 1 python tensorflow2_mnist_hvd.py --num_steps 10
-mpirun -np 2 python tensorflow2_mnist_hvd.py --num_steps 10
-mpirun -np 4 python tensorflow2_mnist_hvd.py --num_steps 10
-mpirun -np 8 python tensorflow2_mnist_hvd.py --num_steps 10
-mpirun -np 16 python tensorflow2_mnist_hvd.py --num_steps 10
+mpirun -np 1 python tensorflow2_mnist_hvd.py
+mpirun -np 2 python tensorflow2_mnist_hvd.py
+mpirun -np 4 python tensorflow2_mnist_hvd.py
+mpirun -np 8 python tensorflow2_mnist_hvd.py
+mpirun -np 16 python tensorflow2_mnist_hvd.py
