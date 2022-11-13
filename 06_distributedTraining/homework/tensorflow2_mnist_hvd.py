@@ -100,8 +100,7 @@ mnist_model = tf.keras.Sequential([
 ])
 loss = tf.losses.SparseCategoricalCrossentropy()
 
-opt = tf.optimizers.Adam(args.lr)
-
+opt = tf.compat.v1.train.AdagradOptimizer(0.01 * hvd.size())\
 checkpoint_dir = './checkpoints/tf2_mnist'
 checkpoint = tf.train.Checkpoint(model=mnist_model, optimizer=opt)
 
@@ -123,7 +122,6 @@ def training_step(ep, nstep, images, labels):
     tape = hvd.DistributedGradientTape(tape)
     grads = tape.gradient(loss_value, mnist_model.trainable_variables)
 
-    opt = tf.compat.v1.train.AdagradOptimizer(0.01 * hvd.size())
     opt.apply_gradients(zip(grads, mnist_model.trainable_variables))
 
     if (nstep == 0 and ep == 0):
