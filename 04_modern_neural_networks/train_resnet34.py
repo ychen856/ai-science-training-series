@@ -1,5 +1,6 @@
 import sys, os
 import time
+import matplotlib.pyplot as plt
 
 # This limits the amount of memory used:
 os.environ["TF_FORCE_GPU_ALLOW_GROWTH"] = "true"
@@ -221,17 +222,25 @@ def training_step(network, optimizer, images, labels):
 
 def train_epoch(i_epoch, step_in_epoch, train_ds, val_ds, network, optimizer, BATCH_SIZE, checkpoint):
     # Here is our training loop!
-
+    losses = []
+    accuracies = []
+    iters = []
+    iter = 0
     steps_per_epoch = int(1281167 / BATCH_SIZE)
     steps_validation = int(50000 / BATCH_SIZE)
 
     start = time.time()
     for train_images, train_labels in train_ds.take(steps_per_epoch):
+        iter = iter + 1
+        iters.append(iter)
         if step_in_epoch > steps_per_epoch: break
         else: step_in_epoch.assign_add(1)
 
         # Peform the training step for this batch
         loss, acc = training_step(network, optimizer, train_images, train_labels)
+        losses.append(loss)
+        accuracies.append(acc)
+
         end = time.time()
         images_per_second = BATCH_SIZE / (end - start)
         print(f"Finished step {step_in_epoch.numpy()} of {steps_per_epoch} in epoch {i_epoch.numpy()},loss={loss:.3f}, acc={acc:.3f} ({images_per_second:.3f} img/s).")
@@ -239,6 +248,7 @@ def train_epoch(i_epoch, step_in_epoch, train_ds, val_ds, network, optimizer, BA
 
     # Save the network after every epoch:
     checkpoint.save("resnet34/model")
+    return iters, losses, accuracies
 
     # Compute the validation accuracy:
     mean_accuracy = None
@@ -300,7 +310,7 @@ def main():
     # Here's some configuration:
     #########################################################################
     BATCH_SIZE = 256
-    N_EPOCHS = 10
+    N_EPOCHS = 1
 
     train_ds, val_ds = prepare_data_loader(BATCH_SIZE)
 
@@ -337,9 +347,14 @@ def main():
         checkpoint.restore(latest_checkpoint)
 
     while epoch < N_EPOCHS:
-        train_epoch(epoch, step_in_epoch, train_ds, val_ds, network, optimizer, BATCH_SIZE, checkpoint)
+        iters, losses, accuracies = train_epoch(epoch, step_in_epoch, train_ds, val_ds, network, optimizer, BATCH_SIZE, checkpoint)
         epoch.assign_add(1)
         step_in_epoch.assign(0)
+
+        plt.plot(iters, losses, label="loss")
+        plt.plot(iters, accuracies, label="accuracy")
+        plt.legend()
+        plt.show()
 
 if __name__ == "__main__":
     main()
