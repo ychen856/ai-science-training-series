@@ -338,6 +338,8 @@ def prepare_data_loader(BATCH_SIZE):
 
 
 def main():
+    print('parallel_threads: ', parallel_threads)
+    print('prefetch_buffer_size', prefetch_buffer_size)
     #########################################################################
     # Here's some configuration:
     #########################################################################
