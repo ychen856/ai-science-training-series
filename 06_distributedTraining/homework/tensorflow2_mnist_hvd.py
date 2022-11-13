@@ -66,12 +66,13 @@ tf.config.experimental.set_visible_devices(gpus[hvd.local_rank()], 'GPU')
 #---------------------------------------------------
 
 (mnist_images, mnist_labels), (x_test, y_test) = \
-    tf.keras.datasets.mnist.load_data(path='mnist.npz').shard(num_shards=hvd.size(), index=hvd.rank())
+    tf.keras.datasets.mnist.load_data(path='mnist.npz')
 
 dataset = tf.data.Dataset.from_tensor_slices(
     (tf.cast(mnist_images[..., tf.newaxis] / 255.0, tf.float32),
              tf.cast(mnist_labels, tf.int64))
 )
+dataset = dataset.shard(num_shards=hvd.size(), index=hvd.rank())
 test_dset = tf.data.Dataset.from_tensor_slices(
     (tf.cast(x_test[..., tf.newaxis] / 255.0, tf.float32),
              tf.cast(y_test, tf.int64))
