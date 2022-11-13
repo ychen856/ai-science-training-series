@@ -232,12 +232,13 @@ def train_epoch(i_epoch, step_in_epoch, train_ds, val_ds, network, optimizer, BA
     start = time.time()
     for train_images, train_labels in train_ds.take(steps_per_epoch):
         iter = iter + 1
-        iters.append(iter)
+
         if step_in_epoch > steps_per_epoch: break
         else: step_in_epoch.assign_add(1)
 
         # Peform the training step for this batch
         loss, acc = training_step(network, optimizer, train_images, train_labels)
+        iters.append(iter)
         losses.append(loss)
         accuracies.append(acc)
 
