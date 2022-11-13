@@ -1,0 +1,10 @@
+
+The following have been reloaded with a version change:
+  1) openmpi/openmpi-4.0.5 => openmpi/openmpi-4.1.4_ucx-1.12.1_gcc-9.4.0
+
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   thetagpu06
+  Local device: mlx5_0
+--------------------------------------------------------------------------
