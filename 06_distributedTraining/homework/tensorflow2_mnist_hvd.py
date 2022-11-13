@@ -123,7 +123,7 @@ def training_step(ep, nstep, images, labels):
     tape = hvd.DistributedGradientTape(tape)
     grads = tape.gradient(loss_value, mnist_model.trainable_variables)
 
-    opt = tf.train.AdagradOptimizer(0.01 * hvd.size())
+    opt = tf.compat.v1.train.AdagradOptimizer(0.01 * hvd.size())
     opt.apply_gradients(zip(grads, mnist_model.trainable_variables))
 
     if (nstep == 0 and ep == 0):
