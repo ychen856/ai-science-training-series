@@ -18,6 +18,7 @@ import argparse
 import numpy as np
 import horovod.tensorflow as hvd
 import time
+import matplotlib.pyplot as plt
 import os
 t0 = time.time()
 parser = argparse.ArgumentParser(description='TensorFlow MNIST Example')
@@ -32,8 +33,10 @@ parser.add_argument('--device', default='gpu',
 parser.add_argument('--num_inter', default=2, help='set number inter', type=int)
 parser.add_argument('--num_intra', default=0, help='set number intra', type=int)
 
+parser.add_argument('--node', default=1)
 args = parser.parse_args()
 
+print('# GPSs: ', args.node)
 
 if args.device == 'cpu':
     tf.config.threading.set_intra_op_parallelism_threads(args.num_intra)
@@ -183,3 +186,9 @@ checkpoint.save(checkpoint_dir)
 np.savetxt("metrics.dat", np.array([metrics['train_acc'], metrics['train_loss'], metrics['valid_acc'], metrics['valid_loss'], metrics['time_per_epochs']]).transpose())
 t1 = time.time()
 print("Total training time: %s seconds" %(t1 - t0))
+
+plt.plot(metrics['train_acc'], label="train accuracy")
+plt.plot(metrics['valid_acc'], label="test accuracy")
+plt.legend()
+plt.show()
+plt.savefig('accuracy_' + args.node + '.png')
