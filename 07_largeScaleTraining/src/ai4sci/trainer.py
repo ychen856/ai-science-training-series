@@ -24,7 +24,7 @@ import horovod.tensorflow as hvd
 
 from omegaconf import DictConfig
 from pathlib import Path
-from ai4sci.network import ResNet34, ConvNet
+from network import ResNet34, ConvNet
 
 HERE = Path(os.path.abspath(__file__)).parent
 CHECKPOINT_DIR = HERE.joinpath('checkpoints')
