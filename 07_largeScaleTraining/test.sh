@@ -10,3 +10,6 @@
 # Set up software deps:
 module load conda/2022-09-08
 conda activate
+
+cd /home/ycchen/ai-science-training-series/07_largeScaleTraining
+python main.py
