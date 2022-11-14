@@ -158,7 +158,7 @@ fi
 
 
 # Keep track of latest logfile for easy access
-echo $LOGFILE >> "${DIR}/logs/latest"
+#echo $LOGFILE >> "${DIR}/logs/latest"
 
 # Double check everythings in the right spot
 echo "DIR=${DIR}"
