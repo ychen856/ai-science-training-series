@@ -84,7 +84,7 @@ class Trainer:
         self.ntest_samples = int(50000)
         self.optimizer = tf.optimizers.Adam(cfg.lr_init * SIZE)
         self.loss_fn = calc_loss
-        from ai4sci.network import prepare_data_loader
+        from network import prepare_data_loader
         train_dset, test_dset = prepare_data_loader(self.cfg.batch_size)
         self.datasets = {'train': train_dset, 'test': test_dset}
         # Setup checkpoint manager only from one process
