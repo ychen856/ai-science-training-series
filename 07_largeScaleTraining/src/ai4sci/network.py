@@ -170,7 +170,7 @@ def prepare_data_loader(BATCH_SIZE):
     # tf.config.threading.set_inter_op_parallelism_threads(8)
     # tf.config.threading.set_intra_op_parallelism_threads(8)
     import json
-    from ai4sci.ilsvrc_dataset import get_datasets
+    from ilsvrc_dataset import get_datasets
 
     config = {}
     config_file = Path(HERE).joinpath('ilsvrc.json')
