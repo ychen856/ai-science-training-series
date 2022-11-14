@@ -36,16 +36,19 @@
 # ┃$ ./main.sh $@ > main.log 2>&1 &            ┃
 # ┃$ tail -f main.log $(tail -1 logs/latest)   ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-
+module load conda/2022-07-01
+conda activate
 TSTAMP=$(date "+%Y-%m-%d-%H%M%S")
 HOST=$(hostname)
 echo "Job ID: ${PBS_JOBID}"
 echo "Job started at: ${TSTAMP}"
+echo "Host name: ${HOST}"
 
 # ---- Specify directories and executable for experiment ------------------
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -LP)
-echo "DIR:$DIR"
-MAIN="${DIR}/main.py"
+#DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -LP)
+#echo "DIR:$DIR"
+#MAIN="${DIR}/main.py"
+MAIN = 'main.py'
 PARENT=$(dirname $DIR)
 ROOT=$(dirname $PARENT)
 
@@ -54,8 +57,7 @@ echo "┃  Job started at: ${TSTAMP} on ${HOST}           ┃"
 echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
 
 NCPUS=$(getconf _NPROCESSORS_ONLN)
-module load conda/2022-07-01
-conda activate
+
 # ---- Check if running on ThetaGPU ----------------------------
 if [[ $(hostname) == theta* ]]; then
 
