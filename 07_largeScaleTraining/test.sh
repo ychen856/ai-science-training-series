@@ -1,15 +1,14 @@
-#!/bin/sh
-#PBS -l select=1:system=polaris
-#PBS -l place=scatter
-#PBS -l walltime=1:00:00
-#PBS -q debug
-#PBS -A datascience
-#PBS -l filesystems=home:eagle
 
+#!/bin/bash -l
+#COBALT -t 60
+#COBALT -q single-gpu
+#COBALT -A ALCFAITP
+#COBALT -n 1
+#COBALT --attrs filesystems=home,grand
 
 # Set up software deps:
-module load conda/2022-09-08
+module load conda/2022-07-01
 conda activate
 
-cd /home/ycchen/ai-science-training-series/07_largeScaleTraining
+cd /home/ycchen/ai-science-training-series/07_largeScaleTraining/src/ai4sci
 python main.py
