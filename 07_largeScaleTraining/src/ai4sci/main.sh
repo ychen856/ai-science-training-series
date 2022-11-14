@@ -54,11 +54,11 @@ echo "┃  Job started at: ${TSTAMP} on ${HOST}           ┃"
 echo "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
 
 NCPUS=$(getconf _NPROCESSORS_ONLN)
-
+module load conda/2022-07-01
+conda activate
 # ---- Check if running on ThetaGPU ----------------------------
 if [[ $(hostname) == theta* ]]; then
-  module load conda/2022-07-01
-  conda activate
+
   NRANKS=$(wc -l < ${COBALT_NODEFILE})
   HOSTFILE=${COBALT_NODEFILE}
   NGPU_PER_RANK=$(nvidia-smi -L | wc -l)
@@ -168,8 +168,8 @@ echo "LOGFILE=${LOGFILE}"
 echo "IBV_FORK_SAFE=${IBV_FORK_SAFE}"
 printf '%.s─' $(seq 1 $(tput cols))
 
-EXEC="${MPI_COMMAND} ${MPI_FLAGS} $(which python3) ${MAIN}"
-
+#EXEC="${MPI_COMMAND} ${MPI_FLAGS} $(which python3) ${MAIN}"
+EXEC="${MPI_COMMAND} $(which python3) ${MAIN}"
 
 # ---- Print job information -------------------------------------------------
 echo "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
