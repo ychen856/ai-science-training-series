@@ -58,7 +58,7 @@ NCPUS=$(getconf _NPROCESSORS_ONLN)
 # ---- Check if running on ThetaGPU ----------------------------
 if [[ $(hostname) == theta* ]]; then
   module load conda/2022-07-01
-  conda activate base
+  conda activate
   NRANKS=$(wc -l < ${COBALT_NODEFILE})
   HOSTFILE=${COBALT_NODEFILE}
   NGPU_PER_RANK=$(nvidia-smi -L | wc -l)
