@@ -1,4 +1,3 @@
-
 #!/bin/bash -l
 #COBALT -t 60
 #COBALT -q single-gpu
