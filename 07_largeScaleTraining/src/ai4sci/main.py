@@ -33,7 +33,7 @@ if gpus:
     )
 
 
-from ai4sci.trainer import Trainer
+from trainer import Trainer
 
 Tensor = tf.Tensor
 Model = tf.keras.models.Model
