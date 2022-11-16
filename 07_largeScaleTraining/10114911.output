@@ -1,0 +1,190 @@
+{
+    "data": {
+        "handler": "ilsvrc_dataset",
+        "batch_size": 256,
+        "train_filelist": "/grand/projects/ALCFAITP/ilsvrc_train_filelist.txt",
+        "test_filelist": "/grand/projects/ALCFAITP/ilsvrc_val_filelist.txt",
+        "shuffle_buffer": 200000,
+        "reshuffle_each_iteration": true,
+        "num_parallel_readers": 128,
+        "prefetch_buffer_size": 8,
+        "crop_image_size": [
+            256,
+            256
+        ],
+        "num_classes": 1000,
+        "num_channels": 3
+    }
+}
+num labels: 1000
+build dataset /grand/projects/ALCFAITP/ilsvrc_train_filelist.txt
+[[36m2022-11-14 01:38:23,367[0m][[34milsvrc_dataset[0m][[32mINFO[0m] - input filelist contains 1281167 files, estimated batches per rank 5004[0m
+build dataset /grand/projects/ALCFAITP/ilsvrc_val_filelist.txt
+[[36m2022-11-14 01:38:26,439[0m][[34milsvrc_dataset[0m][[32mINFO[0m] - input filelist contains 50000 files, estimated batches per rank 195[0m
+[[36m2022-11-14 01:38:47,342[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 0 / 1281167 (0%)] epoch=0.0000 dt=20.0207 running_loss=0.0000 batch_loss=0.0297 acc=0.0000 batch_acc=0.0078[0m
+[[36m2022-11-14 01:38:54,426[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 2560 / 1281167 (0%)] epoch=0.0000 dt=0.3213 running_loss=0.0001 batch_loss=0.0205 acc=0.0000 batch_acc=0.0156[0m
+[[36m2022-11-14 01:38:58,011[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 5120 / 1281167 (0%)] epoch=0.0000 dt=0.2785 running_loss=0.0001 batch_loss=0.0196 acc=0.0001 batch_acc=0.0117[0m
+[[36m2022-11-14 01:39:02,506[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 7680 / 1281167 (1%)] epoch=0.0000 dt=0.3338 running_loss=0.0001 batch_loss=0.0188 acc=0.0001 batch_acc=0.0117[0m
+[[36m2022-11-14 01:39:06,668[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 10240 / 1281167 (1%)] epoch=0.0000 dt=0.2889 running_loss=0.0002 batch_loss=0.0189 acc=0.0002 batch_acc=0.0430[0m
+[[36m2022-11-14 01:39:10,951[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 12800 / 1281167 (1%)] epoch=0.0000 dt=0.3156 running_loss=0.0002 batch_loss=0.0191 acc=0.0003 batch_acc=0.0234[0m
+[[36m2022-11-14 01:39:15,292[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 15360 / 1281167 (1%)] epoch=0.0000 dt=0.3081 running_loss=0.0002 batch_loss=0.0187 acc=0.0004 batch_acc=0.0312[0m
+[[36m2022-11-14 01:39:19,640[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 17920 / 1281167 (1%)] epoch=0.0000 dt=0.3026 running_loss=0.0003 batch_loss=0.0183 acc=0.0005 batch_acc=0.0625[0m
+[[36m2022-11-14 01:39:30,300[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 20480 / 1281167 (2%)] epoch=0.0000 dt=0.4309 running_loss=0.0003 batch_loss=0.0182 acc=0.0006 batch_acc=0.0625[0m
+[[36m2022-11-14 01:39:34,672[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 23040 / 1281167 (2%)] epoch=0.0000 dt=0.3035 running_loss=0.0004 batch_loss=0.0178 acc=0.0007 batch_acc=0.0469[0m
+[[36m2022-11-14 01:39:38,832[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 25600 / 1281167 (2%)] epoch=0.0000 dt=0.2834 running_loss=0.0004 batch_loss=0.0178 acc=0.0008 batch_acc=0.0859[0m
+[[36m2022-11-14 01:39:43,515[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 28160 / 1281167 (2%)] epoch=0.0000 dt=0.2978 running_loss=0.0004 batch_loss=0.0185 acc=0.0009 batch_acc=0.0391[0m
+[[36m2022-11-14 01:39:48,139[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 30720 / 1281167 (2%)] epoch=0.0000 dt=0.2952 running_loss=0.0005 batch_loss=0.0177 acc=0.0010 batch_acc=0.0664[0m
+[[36m2022-11-14 01:39:52,763[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 33280 / 1281167 (3%)] epoch=0.0000 dt=0.2779 running_loss=0.0005 batch_loss=0.0180 acc=0.0011 batch_acc=0.0664[0m
+[[36m2022-11-14 01:39:57,282[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 35840 / 1281167 (3%)] epoch=0.0000 dt=0.2850 running_loss=0.0005 batch_loss=0.0174 acc=0.0013 batch_acc=0.0859[0m
+[[36m2022-11-14 01:40:01,902[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 38400 / 1281167 (3%)] epoch=0.0000 dt=0.3239 running_loss=0.0006 batch_loss=0.0174 acc=0.0014 batch_acc=0.0781[0m
+[[36m2022-11-14 01:40:06,427[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 40960 / 1281167 (3%)] epoch=0.0000 dt=0.2997 running_loss=0.0006 batch_loss=0.0180 acc=0.0015 batch_acc=0.0352[0m
+[[36m2022-11-14 01:40:11,184[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 43520 / 1281167 (3%)] epoch=0.0000 dt=0.2955 running_loss=0.0006 batch_loss=0.0178 acc=0.0017 batch_acc=0.0625[0m
+[[36m2022-11-14 01:40:15,529[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 46080 / 1281167 (4%)] epoch=0.0000 dt=0.2844 running_loss=0.0007 batch_loss=0.0167 acc=0.0018 batch_acc=0.0859[0m
+[[36m2022-11-14 01:40:27,211[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 48640 / 1281167 (4%)] epoch=0.0000 dt=0.2830 running_loss=0.0007 batch_loss=0.0175 acc=0.0020 batch_acc=0.0820[0m
+[[36m2022-11-14 01:40:31,816[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 51200 / 1281167 (4%)] epoch=0.0000 dt=0.3075 running_loss=0.0007 batch_loss=0.0181 acc=0.0021 batch_acc=0.0430[0m
+[[36m2022-11-14 01:40:36,372[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 53760 / 1281167 (4%)] epoch=0.0000 dt=0.3171 running_loss=0.0008 batch_loss=0.0170 acc=0.0023 batch_acc=0.1133[0m
+[[36m2022-11-14 01:40:40,942[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 56320 / 1281167 (4%)] epoch=0.0000 dt=0.2940 running_loss=0.0008 batch_loss=0.0173 acc=0.0025 batch_acc=0.0820[0m
+[[36m2022-11-14 01:40:45,582[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 58880 / 1281167 (5%)] epoch=0.0000 dt=0.3578 running_loss=0.0008 batch_loss=0.0164 acc=0.0026 batch_acc=0.0977[0m
+[[36m2022-11-14 01:40:50,081[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 61440 / 1281167 (5%)] epoch=0.0000 dt=0.3110 running_loss=0.0009 batch_loss=0.0165 acc=0.0028 batch_acc=0.0977[0m
+[[36m2022-11-14 01:40:54,736[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 64000 / 1281167 (5%)] epoch=0.0000 dt=0.3215 running_loss=0.0009 batch_loss=0.0166 acc=0.0030 batch_acc=0.1094[0m
+[[36m2022-11-14 01:40:58,932[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 66560 / 1281167 (5%)] epoch=0.0000 dt=0.3185 running_loss=0.0009 batch_loss=0.0164 acc=0.0032 batch_acc=0.1133[0m
+[[36m2022-11-14 01:41:03,552[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 69120 / 1281167 (5%)] epoch=0.0000 dt=0.3012 running_loss=0.0010 batch_loss=0.0162 acc=0.0034 batch_acc=0.1172[0m
+[[36m2022-11-14 01:41:08,028[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 71680 / 1281167 (6%)] epoch=0.0000 dt=0.2874 running_loss=0.0010 batch_loss=0.0163 acc=0.0036 batch_acc=0.1250[0m
+[[36m2022-11-14 01:41:20,321[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 74240 / 1281167 (6%)] epoch=0.0000 dt=0.2914 running_loss=0.0010 batch_loss=0.0163 acc=0.0038 batch_acc=0.1328[0m
+[[36m2022-11-14 01:41:24,644[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 76800 / 1281167 (6%)] epoch=0.0000 dt=0.3091 running_loss=0.0011 batch_loss=0.0169 acc=0.0040 batch_acc=0.1172[0m
+[[36m2022-11-14 01:41:28,873[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 79360 / 1281167 (6%)] epoch=0.0000 dt=0.2933 running_loss=0.0011 batch_loss=0.0169 acc=0.0043 batch_acc=0.0820[0m
+[[36m2022-11-14 01:41:33,740[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 81920 / 1281167 (6%)] epoch=0.0000 dt=0.2946 running_loss=0.0011 batch_loss=0.0159 acc=0.0045 batch_acc=0.1445[0m
+[[36m2022-11-14 01:41:38,143[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 84480 / 1281167 (7%)] epoch=0.0000 dt=0.2962 running_loss=0.0012 batch_loss=0.0167 acc=0.0047 batch_acc=0.1172[0m
+[[36m2022-11-14 01:41:42,620[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 87040 / 1281167 (7%)] epoch=0.0000 dt=0.2988 running_loss=0.0012 batch_loss=0.0174 acc=0.0049 batch_acc=0.1133[0m
+[[36m2022-11-14 01:41:47,158[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 89600 / 1281167 (7%)] epoch=0.0000 dt=0.2760 running_loss=0.0012 batch_loss=0.0168 acc=0.0051 batch_acc=0.1094[0m
+[[36m2022-11-14 01:41:51,393[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 92160 / 1281167 (7%)] epoch=0.0000 dt=0.2789 running_loss=0.0013 batch_loss=0.0165 acc=0.0054 batch_acc=0.0742[0m
+[[36m2022-11-14 01:41:56,019[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 94720 / 1281167 (7%)] epoch=0.0000 dt=0.3043 running_loss=0.0013 batch_loss=0.0160 acc=0.0056 batch_acc=0.1133[0m
+[[36m2022-11-14 01:42:00,401[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 97280 / 1281167 (8%)] epoch=0.0000 dt=0.3151 running_loss=0.0013 batch_loss=0.0163 acc=0.0058 batch_acc=0.1016[0m
+[[36m2022-11-14 01:42:04,647[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 99840 / 1281167 (8%)] epoch=0.0000 dt=0.2871 running_loss=0.0014 batch_loss=0.0157 acc=0.0061 batch_acc=0.1211[0m
+[[36m2022-11-14 01:42:16,368[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 102400 / 1281167 (8%)] epoch=0.0000 dt=0.3263 running_loss=0.0014 batch_loss=0.0157 acc=0.0063 batch_acc=0.1406[0m
+[[36m2022-11-14 01:42:21,003[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 104960 / 1281167 (8%)] epoch=0.0000 dt=0.3307 running_loss=0.0014 batch_loss=0.0162 acc=0.0066 batch_acc=0.1445[0m
+[[36m2022-11-14 01:42:25,163[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 107520 / 1281167 (8%)] epoch=0.0000 dt=0.3084 running_loss=0.0015 batch_loss=0.0162 acc=0.0068 batch_acc=0.1484[0m
+[[36m2022-11-14 01:42:29,546[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 110080 / 1281167 (9%)] epoch=0.0000 dt=0.2916 running_loss=0.0015 batch_loss=0.0162 acc=0.0071 batch_acc=0.1250[0m
+[[36m2022-11-14 01:42:33,844[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 112640 / 1281167 (9%)] epoch=0.0000 dt=0.2910 running_loss=0.0015 batch_loss=0.0167 acc=0.0074 batch_acc=0.1250[0m
+[[36m2022-11-14 01:42:38,354[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 115200 / 1281167 (9%)] epoch=0.0000 dt=0.2804 running_loss=0.0016 batch_loss=0.0161 acc=0.0077 batch_acc=0.1445[0m
+[[36m2022-11-14 01:42:42,617[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 117760 / 1281167 (9%)] epoch=0.0000 dt=0.2885 running_loss=0.0016 batch_loss=0.0168 acc=0.0079 batch_acc=0.1328[0m
+[[36m2022-11-14 01:42:47,173[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 120320 / 1281167 (9%)] epoch=0.0000 dt=0.2766 running_loss=0.0016 batch_loss=0.0157 acc=0.0082 batch_acc=0.1602[0m
+[[36m2022-11-14 01:42:51,647[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 122880 / 1281167 (10%)] epoch=0.0000 dt=0.2790 running_loss=0.0017 batch_loss=0.0157 acc=0.0085 batch_acc=0.1328[0m
+[[36m2022-11-14 01:42:56,882[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 125440 / 1281167 (10%)] epoch=0.0000 dt=0.2957 running_loss=0.0017 batch_loss=0.0157 acc=0.0087 batch_acc=0.1602[0m
+[[36m2022-11-14 01:43:01,279[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 128000 / 1281167 (10%)] epoch=0.0000 dt=0.3243 running_loss=0.0017 batch_loss=0.0160 acc=0.0090 batch_acc=0.1289[0m
+[[36m2022-11-14 01:43:13,810[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 130560 / 1281167 (10%)] epoch=0.0000 dt=2.9804 running_loss=0.0018 batch_loss=0.0165 acc=0.0093 batch_acc=0.1523[0m
+[[36m2022-11-14 01:43:17,888[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 133120 / 1281167 (10%)] epoch=0.0000 dt=0.2703 running_loss=0.0018 batch_loss=0.0154 acc=0.0096 batch_acc=0.1250[0m
+[[36m2022-11-14 01:43:22,260[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 135680 / 1281167 (11%)] epoch=0.0000 dt=0.2738 running_loss=0.0018 batch_loss=0.0160 acc=0.0099 batch_acc=0.1445[0m
+[[36m2022-11-14 01:43:26,430[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 138240 / 1281167 (11%)] epoch=0.0000 dt=0.2908 running_loss=0.0019 batch_loss=0.0153 acc=0.0102 batch_acc=0.1680[0m
+[[36m2022-11-14 01:43:30,575[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 140800 / 1281167 (11%)] epoch=0.0000 dt=0.3267 running_loss=0.0019 batch_loss=0.0154 acc=0.0105 batch_acc=0.1172[0m
+[[36m2022-11-14 01:43:34,867[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 143360 / 1281167 (11%)] epoch=0.0000 dt=0.2814 running_loss=0.0019 batch_loss=0.0162 acc=0.0108 batch_acc=0.1211[0m
+[[36m2022-11-14 01:43:39,031[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 145920 / 1281167 (11%)] epoch=0.0000 dt=0.3055 running_loss=0.0019 batch_loss=0.0156 acc=0.0111 batch_acc=0.1758[0m
+[[36m2022-11-14 01:43:43,389[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 148480 / 1281167 (12%)] epoch=0.0000 dt=0.3135 running_loss=0.0020 batch_loss=0.0157 acc=0.0114 batch_acc=0.1172[0m
+[[36m2022-11-14 01:43:47,481[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 151040 / 1281167 (12%)] epoch=0.0000 dt=0.2999 running_loss=0.0020 batch_loss=0.0153 acc=0.0117 batch_acc=0.2031[0m
+[[36m2022-11-14 01:43:51,719[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 153600 / 1281167 (12%)] epoch=0.0000 dt=0.3151 running_loss=0.0020 batch_loss=0.0155 acc=0.0121 batch_acc=0.1602[0m
+[[36m2022-11-14 01:43:55,859[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 156160 / 1281167 (12%)] epoch=0.0000 dt=0.2822 running_loss=0.0021 batch_loss=0.0155 acc=0.0124 batch_acc=0.1328[0m
+[[36m2022-11-14 01:43:59,950[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 158720 / 1281167 (12%)] epoch=0.0000 dt=0.2718 running_loss=0.0021 batch_loss=0.0154 acc=0.0127 batch_acc=0.1094[0m
+[[36m2022-11-14 01:44:04,254[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 161280 / 1281167 (13%)] epoch=0.0000 dt=0.2882 running_loss=0.0021 batch_loss=0.0149 acc=0.0131 batch_acc=0.1484[0m
+[[36m2022-11-14 01:44:08,453[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 163840 / 1281167 (13%)] epoch=0.0000 dt=0.3001 running_loss=0.0022 batch_loss=0.0154 acc=0.0134 batch_acc=0.1758[0m
+[[36m2022-11-14 01:44:12,593[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 166400 / 1281167 (13%)] epoch=0.0000 dt=0.3049 running_loss=0.0022 batch_loss=0.0152 acc=0.0137 batch_acc=0.1602[0m
+[[36m2022-11-14 01:44:16,752[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 168960 / 1281167 (13%)] epoch=0.0000 dt=0.3132 running_loss=0.0022 batch_loss=0.0159 acc=0.0140 batch_acc=0.1406[0m
+[[36m2022-11-14 01:44:21,322[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 171520 / 1281167 (13%)] epoch=0.0000 dt=0.3034 running_loss=0.0023 batch_loss=0.0156 acc=0.0144 batch_acc=0.1875[0m
+[[36m2022-11-14 01:44:25,560[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 174080 / 1281167 (14%)] epoch=0.0000 dt=0.3110 running_loss=0.0023 batch_loss=0.0157 acc=0.0147 batch_acc=0.1836[0m
+[[36m2022-11-14 01:44:38,465[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 176640 / 1281167 (14%)] epoch=0.0000 dt=0.3258 running_loss=0.0023 batch_loss=0.0157 acc=0.0150 batch_acc=0.1445[0m
+[[36m2022-11-14 01:44:42,535[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 179200 / 1281167 (14%)] epoch=0.0000 dt=0.2956 running_loss=0.0023 batch_loss=0.0159 acc=0.0154 batch_acc=0.1250[0m
+[[36m2022-11-14 01:44:46,819[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 181760 / 1281167 (14%)] epoch=0.0000 dt=0.3357 running_loss=0.0024 batch_loss=0.0145 acc=0.0157 batch_acc=0.2031[0m
+[[36m2022-11-14 01:44:51,022[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 184320 / 1281167 (14%)] epoch=0.0000 dt=0.2983 running_loss=0.0024 batch_loss=0.0156 acc=0.0161 batch_acc=0.2109[0m
+[[36m2022-11-14 01:44:55,573[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 186880 / 1281167 (15%)] epoch=0.0000 dt=0.2817 running_loss=0.0024 batch_loss=0.0155 acc=0.0164 batch_acc=0.1484[0m
+[[36m2022-11-14 01:44:59,833[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 189440 / 1281167 (15%)] epoch=0.0000 dt=0.2769 running_loss=0.0025 batch_loss=0.0161 acc=0.0168 batch_acc=0.1367[0m
+[[36m2022-11-14 01:45:03,977[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 192000 / 1281167 (15%)] epoch=0.0000 dt=0.2915 running_loss=0.0025 batch_loss=0.0155 acc=0.0171 batch_acc=0.1758[0m
+[[36m2022-11-14 01:45:08,181[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 194560 / 1281167 (15%)] epoch=0.0000 dt=0.2966 running_loss=0.0025 batch_loss=0.0161 acc=0.0175 batch_acc=0.1641[0m
+[[36m2022-11-14 01:45:12,216[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 197120 / 1281167 (15%)] epoch=0.0000 dt=0.2820 running_loss=0.0026 batch_loss=0.0146 acc=0.0179 batch_acc=0.1875[0m
+[[36m2022-11-14 01:45:16,436[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 199680 / 1281167 (16%)] epoch=0.0000 dt=0.2813 running_loss=0.0026 batch_loss=0.0158 acc=0.0182 batch_acc=0.1562[0m
+[[36m2022-11-14 01:45:20,561[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 202240 / 1281167 (16%)] epoch=0.0000 dt=0.2791 running_loss=0.0026 batch_loss=0.0151 acc=0.0185 batch_acc=0.1758[0m
+[[36m2022-11-14 01:45:24,790[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 204800 / 1281167 (16%)] epoch=0.0000 dt=0.3056 running_loss=0.0027 batch_loss=0.0149 acc=0.0189 batch_acc=0.1758[0m
+[[36m2022-11-14 01:45:28,915[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 207360 / 1281167 (16%)] epoch=0.0000 dt=0.2847 running_loss=0.0027 batch_loss=0.0158 acc=0.0192 batch_acc=0.1328[0m
+[[36m2022-11-14 01:45:33,909[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 209920 / 1281167 (16%)] epoch=0.0000 dt=0.2782 running_loss=0.0027 batch_loss=0.0147 acc=0.0196 batch_acc=0.1641[0m
+[[36m2022-11-14 01:45:37,964[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 212480 / 1281167 (17%)] epoch=0.0000 dt=0.2809 running_loss=0.0027 batch_loss=0.0150 acc=0.0200 batch_acc=0.1914[0m
+[[36m2022-11-14 01:45:51,220[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 215040 / 1281167 (17%)] epoch=0.0000 dt=0.2835 running_loss=0.0028 batch_loss=0.0155 acc=0.0203 batch_acc=0.1758[0m
+[[36m2022-11-14 01:45:55,584[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 217600 / 1281167 (17%)] epoch=0.0000 dt=0.2816 running_loss=0.0028 batch_loss=0.0150 acc=0.0207 batch_acc=0.1836[0m
+[[36m2022-11-14 01:45:59,847[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 220160 / 1281167 (17%)] epoch=0.0000 dt=0.2850 running_loss=0.0028 batch_loss=0.0160 acc=0.0211 batch_acc=0.1602[0m
+[[36m2022-11-14 01:46:03,954[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 222720 / 1281167 (17%)] epoch=0.0000 dt=0.3268 running_loss=0.0029 batch_loss=0.0151 acc=0.0214 batch_acc=0.1602[0m
+[[36m2022-11-14 01:46:08,200[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 225280 / 1281167 (18%)] epoch=0.0000 dt=0.2810 running_loss=0.0029 batch_loss=0.0149 acc=0.0218 batch_acc=0.1797[0m
+[[36m2022-11-14 01:46:12,421[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 227840 / 1281167 (18%)] epoch=0.0000 dt=0.2829 running_loss=0.0029 batch_loss=0.0154 acc=0.0222 batch_acc=0.1914[0m
+[[36m2022-11-14 01:46:16,886[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 230400 / 1281167 (18%)] epoch=0.0000 dt=0.2850 running_loss=0.0030 batch_loss=0.0151 acc=0.0225 batch_acc=0.2070[0m
+[[36m2022-11-14 01:46:20,956[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 232960 / 1281167 (18%)] epoch=0.0000 dt=0.2825 running_loss=0.0030 batch_loss=0.0148 acc=0.0229 batch_acc=0.1523[0m
+[[36m2022-11-14 01:46:25,147[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 235520 / 1281167 (18%)] epoch=0.0000 dt=0.3078 running_loss=0.0030 batch_loss=0.0152 acc=0.0233 batch_acc=0.1602[0m
+[[36m2022-11-14 01:46:29,716[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 238080 / 1281167 (19%)] epoch=0.0000 dt=0.2851 running_loss=0.0030 batch_loss=0.0157 acc=0.0237 batch_acc=0.1797[0m
+[[36m2022-11-14 01:46:33,980[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 240640 / 1281167 (19%)] epoch=0.0000 dt=0.2760 running_loss=0.0031 batch_loss=0.0150 acc=0.0241 batch_acc=0.1797[0m
+[[36m2022-11-14 01:46:38,420[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 243200 / 1281167 (19%)] epoch=0.0000 dt=0.2859 running_loss=0.0031 batch_loss=0.0151 acc=0.0244 batch_acc=0.1836[0m
+[[36m2022-11-14 01:46:42,634[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 245760 / 1281167 (19%)] epoch=0.0000 dt=0.3285 running_loss=0.0031 batch_loss=0.0145 acc=0.0248 batch_acc=0.2070[0m
+[[36m2022-11-14 01:46:47,021[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 248320 / 1281167 (19%)] epoch=0.0000 dt=0.2913 running_loss=0.0032 batch_loss=0.0151 acc=0.0252 batch_acc=0.1836[0m
+[[36m2022-11-14 01:46:51,602[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 250880 / 1281167 (20%)] epoch=0.0000 dt=0.3116 running_loss=0.0032 batch_loss=0.0142 acc=0.0256 batch_acc=0.2070[0m
+[[36m2022-11-14 01:46:55,539[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 253440 / 1281167 (20%)] epoch=0.0000 dt=0.2687 running_loss=0.0032 batch_loss=0.0142 acc=0.0260 batch_acc=0.2070[0m
+[[36m2022-11-14 01:47:08,798[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 256000 / 1281167 (20%)] epoch=0.0000 dt=0.2746 running_loss=0.0032 batch_loss=0.0160 acc=0.0264 batch_acc=0.1758[0m
+[[36m2022-11-14 01:47:12,965[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 258560 / 1281167 (20%)] epoch=0.0000 dt=0.2742 running_loss=0.0033 batch_loss=0.0134 acc=0.0268 batch_acc=0.2266[0m
+[[36m2022-11-14 01:47:17,241[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 261120 / 1281167 (20%)] epoch=0.0000 dt=0.2875 running_loss=0.0033 batch_loss=0.0138 acc=0.0272 batch_acc=0.2617[0m
+[[36m2022-11-14 01:47:21,391[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 263680 / 1281167 (21%)] epoch=0.0000 dt=0.3110 running_loss=0.0033 batch_loss=0.0147 acc=0.0277 batch_acc=0.2422[0m
+[[36m2022-11-14 01:47:25,634[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 266240 / 1281167 (21%)] epoch=0.0000 dt=0.3141 running_loss=0.0034 batch_loss=0.0149 acc=0.0281 batch_acc=0.2031[0m
+[[36m2022-11-14 01:47:29,824[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 268800 / 1281167 (21%)] epoch=0.0000 dt=0.3033 running_loss=0.0034 batch_loss=0.0138 acc=0.0285 batch_acc=0.2812[0m
+[[36m2022-11-14 01:47:34,034[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 271360 / 1281167 (21%)] epoch=0.0000 dt=0.2987 running_loss=0.0034 batch_loss=0.0139 acc=0.0289 batch_acc=0.2266[0m
+[[36m2022-11-14 01:47:38,077[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 273920 / 1281167 (21%)] epoch=0.0000 dt=0.2742 running_loss=0.0035 batch_loss=0.0128 acc=0.0294 batch_acc=0.3242[0m
+[[36m2022-11-14 01:47:42,477[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 276480 / 1281167 (22%)] epoch=0.0000 dt=0.3355 running_loss=0.0035 batch_loss=0.0143 acc=0.0298 batch_acc=0.1914[0m
+[[36m2022-11-14 01:47:46,561[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 279040 / 1281167 (22%)] epoch=0.0000 dt=0.2761 running_loss=0.0035 batch_loss=0.0144 acc=0.0302 batch_acc=0.2227[0m
+[[36m2022-11-14 01:47:50,939[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 281600 / 1281167 (22%)] epoch=0.0000 dt=0.3138 running_loss=0.0035 batch_loss=0.0145 acc=0.0307 batch_acc=0.2070[0m
+[[36m2022-11-14 01:47:55,115[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 284160 / 1281167 (22%)] epoch=0.0000 dt=0.3354 running_loss=0.0036 batch_loss=0.0144 acc=0.0311 batch_acc=0.1953[0m
+[[36m2022-11-14 01:47:59,327[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 286720 / 1281167 (22%)] epoch=0.0000 dt=0.3197 running_loss=0.0036 batch_loss=0.0143 acc=0.0315 batch_acc=0.1914[0m
+[[36m2022-11-14 01:48:03,448[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 289280 / 1281167 (23%)] epoch=0.0000 dt=0.2974 running_loss=0.0036 batch_loss=0.0156 acc=0.0319 batch_acc=0.1797[0m
+[[36m2022-11-14 01:48:08,180[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 291840 / 1281167 (23%)] epoch=0.0000 dt=0.2652 running_loss=0.0037 batch_loss=0.0137 acc=0.0324 batch_acc=0.2461[0m
+[[36m2022-11-14 01:48:21,158[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 294400 / 1281167 (23%)] epoch=0.0000 dt=0.3012 running_loss=0.0037 batch_loss=0.0148 acc=0.0328 batch_acc=0.2305[0m
+[[36m2022-11-14 01:48:25,466[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 296960 / 1281167 (23%)] epoch=0.0000 dt=0.2924 running_loss=0.0037 batch_loss=0.0141 acc=0.0333 batch_acc=0.2305[0m
+[[36m2022-11-14 01:48:29,901[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 299520 / 1281167 (23%)] epoch=0.0000 dt=0.2848 running_loss=0.0037 batch_loss=0.0145 acc=0.0337 batch_acc=0.2148[0m
+[[36m2022-11-14 01:48:34,218[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 302080 / 1281167 (24%)] epoch=0.0000 dt=0.2920 running_loss=0.0038 batch_loss=0.0138 acc=0.0341 batch_acc=0.2305[0m
+[[36m2022-11-14 01:48:38,454[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 304640 / 1281167 (24%)] epoch=0.0000 dt=0.3247 running_loss=0.0038 batch_loss=0.0139 acc=0.0346 batch_acc=0.2305[0m
+[[36m2022-11-14 01:48:42,603[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 307200 / 1281167 (24%)] epoch=0.0000 dt=0.3179 running_loss=0.0038 batch_loss=0.0138 acc=0.0350 batch_acc=0.2461[0m
+[[36m2022-11-14 01:48:46,748[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 309760 / 1281167 (24%)] epoch=0.0000 dt=0.3343 running_loss=0.0039 batch_loss=0.0144 acc=0.0355 batch_acc=0.2461[0m
+[[36m2022-11-14 01:48:50,827[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 312320 / 1281167 (24%)] epoch=0.0000 dt=0.2777 running_loss=0.0039 batch_loss=0.0142 acc=0.0359 batch_acc=0.2344[0m
+[[36m2022-11-14 01:48:55,030[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 314880 / 1281167 (25%)] epoch=0.0000 dt=0.2812 running_loss=0.0039 batch_loss=0.0134 acc=0.0364 batch_acc=0.2578[0m
+[[36m2022-11-14 01:48:59,352[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 317440 / 1281167 (25%)] epoch=0.0000 dt=0.3219 running_loss=0.0039 batch_loss=0.0143 acc=0.0368 batch_acc=0.2148[0m
+[[36m2022-11-14 01:49:03,798[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 320000 / 1281167 (25%)] epoch=0.0000 dt=0.3337 running_loss=0.0040 batch_loss=0.0135 acc=0.0373 batch_acc=0.2266[0m
+[[36m2022-11-14 01:49:07,997[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 322560 / 1281167 (25%)] epoch=0.0000 dt=0.2789 running_loss=0.0040 batch_loss=0.0136 acc=0.0378 batch_acc=0.2500[0m
+[[36m2022-11-14 01:49:12,231[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 325120 / 1281167 (25%)] epoch=0.0000 dt=0.2831 running_loss=0.0040 batch_loss=0.0141 acc=0.0382 batch_acc=0.2539[0m
+[[36m2022-11-14 01:49:16,722[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 327680 / 1281167 (26%)] epoch=0.0000 dt=0.2818 running_loss=0.0041 batch_loss=0.0134 acc=0.0387 batch_acc=0.2578[0m
+[[36m2022-11-14 01:49:21,369[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 330240 / 1281167 (26%)] epoch=0.0000 dt=0.2744 running_loss=0.0041 batch_loss=0.0147 acc=0.0392 batch_acc=0.2227[0m
+[[36m2022-11-14 01:49:34,519[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 332800 / 1281167 (26%)] epoch=0.0000 dt=0.3202 running_loss=0.0041 batch_loss=0.0138 acc=0.0397 batch_acc=0.2461[0m
+[[36m2022-11-14 01:49:38,728[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 335360 / 1281167 (26%)] epoch=0.0000 dt=0.2844 running_loss=0.0041 batch_loss=0.0141 acc=0.0402 batch_acc=0.2617[0m
+[[36m2022-11-14 01:49:42,932[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 337920 / 1281167 (26%)] epoch=0.0000 dt=0.2772 running_loss=0.0042 batch_loss=0.0138 acc=0.0407 batch_acc=0.2227[0m
+[[36m2022-11-14 01:49:47,203[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 340480 / 1281167 (27%)] epoch=0.0000 dt=0.2777 running_loss=0.0042 batch_loss=0.0138 acc=0.0412 batch_acc=0.2773[0m
+[[36m2022-11-14 01:49:51,296[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 343040 / 1281167 (27%)] epoch=0.0000 dt=0.2816 running_loss=0.0042 batch_loss=0.0141 acc=0.0417 batch_acc=0.2578[0m
+[[36m2022-11-14 01:49:55,444[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 345600 / 1281167 (27%)] epoch=0.0000 dt=0.2872 running_loss=0.0042 batch_loss=0.0137 acc=0.0422 batch_acc=0.2500[0m
+[[36m2022-11-14 01:49:59,865[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 348160 / 1281167 (27%)] epoch=0.0000 dt=0.3237 running_loss=0.0043 batch_loss=0.0141 acc=0.0427 batch_acc=0.2383[0m
+[[36m2022-11-14 01:50:04,175[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 350720 / 1281167 (27%)] epoch=0.0000 dt=0.2848 running_loss=0.0043 batch_loss=0.0130 acc=0.0432 batch_acc=0.3008[0m
+[[36m2022-11-14 01:50:08,358[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 353280 / 1281167 (28%)] epoch=0.0000 dt=0.2896 running_loss=0.0043 batch_loss=0.0139 acc=0.0437 batch_acc=0.2227[0m
+[[36m2022-11-14 01:50:12,626[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 355840 / 1281167 (28%)] epoch=0.0000 dt=0.3046 running_loss=0.0044 batch_loss=0.0131 acc=0.0442 batch_acc=0.2695[0m
+[[36m2022-11-14 01:50:16,873[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 358400 / 1281167 (28%)] epoch=0.0000 dt=0.2975 running_loss=0.0044 batch_loss=0.0135 acc=0.0447 batch_acc=0.2695[0m
+[[36m2022-11-14 01:50:21,122[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 360960 / 1281167 (28%)] epoch=0.0000 dt=0.2990 running_loss=0.0044 batch_loss=0.0131 acc=0.0452 batch_acc=0.2695[0m
+[[36m2022-11-14 01:50:25,265[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 363520 / 1281167 (28%)] epoch=0.0000 dt=0.2944 running_loss=0.0044 batch_loss=0.0130 acc=0.0458 batch_acc=0.3164[0m
+[[36m2022-11-14 01:50:29,448[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 366080 / 1281167 (29%)] epoch=0.0000 dt=0.2761 running_loss=0.0045 batch_loss=0.0132 acc=0.0463 batch_acc=0.2656[0m
+[[36m2022-11-14 01:50:33,540[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 368640 / 1281167 (29%)] epoch=0.0000 dt=0.3151 running_loss=0.0045 batch_loss=0.0132 acc=0.0468 batch_acc=0.2852[0m
+[[36m2022-11-14 01:50:46,717[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 371200 / 1281167 (29%)] epoch=0.0000 dt=0.2881 running_loss=0.0045 batch_loss=0.0130 acc=0.0473 batch_acc=0.3047[0m
+[[36m2022-11-14 01:50:51,017[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 373760 / 1281167 (29%)] epoch=0.0000 dt=0.2748 running_loss=0.0045 batch_loss=0.0134 acc=0.0479 batch_acc=0.2852[0m
+[[36m2022-11-14 01:51:01,201[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 376320 / 1281167 (29%)] epoch=0.0000 dt=0.3015 running_loss=0.0046 batch_loss=0.0136 acc=0.0484 batch_acc=0.2656[0m
+[[36m2022-11-14 01:51:05,338[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 378880 / 1281167 (30%)] epoch=0.0000 dt=0.2709 running_loss=0.0046 batch_loss=0.0152 acc=0.0489 batch_acc=0.2266[0m
+[[36m2022-11-14 01:51:09,675[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 381440 / 1281167 (30%)] epoch=0.0000 dt=0.3069 running_loss=0.0046 batch_loss=0.0134 acc=0.0495 batch_acc=0.2383[0m
+[[36m2022-11-14 01:51:14,037[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 384000 / 1281167 (30%)] epoch=0.0000 dt=0.3240 running_loss=0.0047 batch_loss=0.0133 acc=0.0500 batch_acc=0.2617[0m
+[[36m2022-11-14 01:51:18,312[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 386560 / 1281167 (30%)] epoch=0.0000 dt=0.2890 running_loss=0.0047 batch_loss=0.0131 acc=0.0505 batch_acc=0.2812[0m
+[[36m2022-11-14 01:51:22,509[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 389120 / 1281167 (30%)] epoch=0.0000 dt=0.3132 running_loss=0.0047 batch_loss=0.0129 acc=0.0510 batch_acc=0.2852[0m
+[[36m2022-11-14 01:51:26,778[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 391680 / 1281167 (31%)] epoch=0.0000 dt=0.2883 running_loss=0.0047 batch_loss=0.0140 acc=0.0516 batch_acc=0.2422[0m
+[[36m2022-11-14 01:51:30,900[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 394240 / 1281167 (31%)] epoch=0.0000 dt=0.2721 running_loss=0.0048 batch_loss=0.0135 acc=0.0521 batch_acc=0.2695[0m
+[[36m2022-11-14 01:51:35,346[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 396800 / 1281167 (31%)] epoch=0.0000 dt=0.3161 running_loss=0.0048 batch_loss=0.0130 acc=0.0527 batch_acc=0.2812[0m
+[[36m2022-11-14 01:51:39,615[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 399360 / 1281167 (31%)] epoch=0.0000 dt=0.3075 running_loss=0.0048 batch_loss=0.0118 acc=0.0533 batch_acc=0.3203[0m
+[[36m2022-11-14 01:51:43,694[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 401920 / 1281167 (31%)] epoch=0.0000 dt=0.3055 running_loss=0.0048 batch_loss=0.0137 acc=0.0538 batch_acc=0.2461[0m
+[[36m2022-11-14 01:51:47,846[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 404480 / 1281167 (32%)] epoch=0.0000 dt=0.2777 running_loss=0.0049 batch_loss=0.0133 acc=0.0544 batch_acc=0.2969[0m
+[[36m2022-11-14 01:51:51,933[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 407040 / 1281167 (32%)] epoch=0.0000 dt=0.2723 running_loss=0.0049 batch_loss=0.0130 acc=0.0549 batch_acc=0.2812[0m
+[[36m2022-11-14 01:51:56,031[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 409600 / 1281167 (32%)] epoch=0.0000 dt=0.2974 running_loss=0.0049 batch_loss=0.0134 acc=0.0554 batch_acc=0.2695[0m
+[[36m2022-11-14 01:52:00,737[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 412160 / 1281167 (32%)] epoch=0.0000 dt=0.2868 running_loss=0.0049 batch_loss=0.0126 acc=0.0560 batch_acc=0.2656[0m
+[[36m2022-11-14 01:52:04,863[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 414720 / 1281167 (32%)] epoch=0.0000 dt=0.2766 running_loss=0.0050 batch_loss=0.0134 acc=0.0565 batch_acc=0.2617[0m
+[[36m2022-11-14 01:52:09,027[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 417280 / 1281167 (33%)] epoch=0.0000 dt=0.2734 running_loss=0.0050 batch_loss=0.0135 acc=0.0571 batch_acc=0.2266[0m
+[[36m2022-11-14 01:52:23,318[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 419840 / 1281167 (33%)] epoch=0.0000 dt=0.2801 running_loss=0.0050 batch_loss=0.0127 acc=0.0576 batch_acc=0.2930[0m
+[[36m2022-11-14 01:52:27,401[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 422400 / 1281167 (33%)] epoch=0.0000 dt=0.2802 running_loss=0.0051 batch_loss=0.0127 acc=0.0582 batch_acc=0.2656[0m
+[[36m2022-11-14 01:52:31,568[0m][[34mtrainer[0m][[32mINFO[0m] - [0] [0/1: 424960 / 1281167 (33%)] epoch=0.0000 dt=0.2735 running_loss=0.0051 batch_loss=0.0138 acc=0.0587 batch_acc=0.2734[0m
