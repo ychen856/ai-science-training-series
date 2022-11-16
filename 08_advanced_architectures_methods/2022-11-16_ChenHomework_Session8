@@ -1,0 +1,15 @@
+	•	How could you use AI for a problem that interests you?
+There are many things that can take advantage of AI especially when there has a large data size. Machine learning right now is very mature in image processing. Therefore, I’m thinking about, why not just create an image but a series of images which make it a video.
+
+	•	What is the task?
+The task will be to input one frame of the video and produce the next frame. And feed the next frame to the model and create the further next frame, etc. With the recursive network, we can produce a video.
+
+	•	What kind of data would you use?
+The training set input will be one frame of videos, and the target is the rest of the frames except the first frame. In the inference part, we can feed the first image and get the rest of the frames.
+
+	•	What kind of method or model might be appropriate?
+It can use the RNN structure. Also because it relates to image processing, we can use technic from CNN as well.
+
+	•	What kind of metric would you use to measure success?
+Actually, it is hard to measure accuracy in this case, because, in RNN, the output is usually very simple, but if we generate images, there have many factors. We cannot just classify the content of the image because it is possible that two frames are so different but all describe the same feature. Therefore, we need a grader as GAN to grade the similarity of two images. We want similarity between a certain values so the output will not be identical or too far away from the input.
+
